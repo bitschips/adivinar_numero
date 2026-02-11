@@ -22,6 +22,7 @@ sequenceDiagram
     H->>U: Actualiza texto en pantalla
 ```
 # Validación de errores
+```mermaid
 graph TD
     A[Inicio: Usuario pulsa Botón] --> B{¿Input es un número?}
     B -- No (Texto o Vacío) --> C[Mostrar Error: 'Introduce un número válido']
@@ -34,3 +35,4 @@ graph TD
     H --> J[Esperar nueva entrada]
     C --> J
     E --> J
+```
