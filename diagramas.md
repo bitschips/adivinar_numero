@@ -82,4 +82,26 @@ graph TD
     I --> K[Mostrar mensaje final con total de intentos]
     K --> L[Fin / Reiniciar]
 ```
-
+## Diagrama de bloques con conteo de intentos
+```mermaid
+graph TD
+    A[Inicio] --> B[Usuario introduce número]
+    B --> C{¿Es un número?}
+    
+    C -- No --> D[Mostrar error de formato]
+    D --> B
+    
+    C -- Sí --> E[Sumar +1 al contador de intentos]
+    E --> F{¿Es el correcto?}
+    
+    F -- Sí --> G[¡Victoria! 🎉]
+    G --> H[Mostrar total de intentos y Reiniciar]
+    
+    F -- No --> I{¿Intentos < Máximo?}
+    
+    I -- Sí --> J[Dar Pista: Más alto/bajo]
+    J --> B
+    
+    I -- No --> K[¡Has perdido! 💀]
+    K --> L[Revelar número secreto y Reiniciar]
+    ```
