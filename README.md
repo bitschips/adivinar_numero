@@ -21,3 +21,16 @@ sequenceDiagram
     J-->>H: Devuelve "Más alto" o "Ganaste"
     H->>U: Actualiza texto en pantalla
 ```
+# Validación de errores
+graph TD
+    A[Inicio: Usuario pulsa Botón] --> B{¿Input es un número?}
+    B -- No (Texto o Vacío) --> C[Mostrar Error: 'Introduce un número válido']
+    B -- Sí --> D{¿Está entre 1 y 100?}
+    D -- No --> E[Mostrar Aviso: 'Fuera de rango']
+    D -- Sí --> F[Clase Juego: comprobarIntento]
+    F --> G{¿Es el correcto?}
+    G -- No --> H[Actualizar Intentos y dar Pista]
+    G -- Sí --> I[¡Victoria! Cambiar Color y Título]
+    H --> J[Esperar nueva entrada]
+    C --> J
+    E --> J
