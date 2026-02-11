@@ -97,11 +97,11 @@ graph TD
     F -- Sí --> G[¡Victoria! 🎉]
     G --> H[Mostrar total de intentos y Reiniciar]
     
-    F -- No --> I{¿Intentos < Máximo?}
-    
-    I -- Sí --> J[Dar Pista: Más alto/bajo]
-    J --> B
+    F -- No --> I{¿Quedan intentos?}
     
     I -- No --> K[¡Has perdido! 💀]
     K --> L[Revelar número secreto y Reiniciar]
+
+    I -- Sí --> J[Dar Pista: Más alto/bajo]
+    J --> B
     ```
