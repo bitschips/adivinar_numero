@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant U as Usuario
     participant H as HTML (Interfaz)
@@ -8,3 +9,4 @@ sequenceDiagram
     Note over J: Incrementa intentos
     J-->>H: Devuelve "Más alto" o "Ganaste"
     H->>U: Actualiza texto en pantalla
+```
