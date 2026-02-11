@@ -2,7 +2,7 @@
 
 
 ## Diagrama de secuencia
-´´´mermaid
+```mermaid
 sequenceDiagram
     actor Usuario
     participant UI as InterfazUsuario
@@ -121,6 +121,5 @@ sequenceDiagram
                     activat
     InterfazUsuario ..> MensajeJuego : muestra
 
-```
     Historial --> InterfazUsuario : actualiza
 ```
