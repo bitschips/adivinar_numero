@@ -1,3 +1,14 @@
+# Arquitectura del Juego
+
+```mermaid
+graph TD
+    A[Usuario] -->|Escribe número| B(Interfaz HTML)
+    B -->|Llama función| C{Clase Juego}
+    C -->|Verifica| D[Resultado]
+    D -->|Actualiza| B
+```
+
+# Diagrama de secuencia
 ```mermaid
 sequenceDiagram
     participant U as Usuario
