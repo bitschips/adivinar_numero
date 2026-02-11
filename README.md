@@ -36,3 +36,22 @@ graph TD
     C --> J
     E --> J
 ```
+
+# Subgrafos
+```mermaid
+graph TB
+    subgraph Navegador_Usuario
+        A[Input Numero] --> B[Validación Formato]
+    end
+    
+    subgraph Logica_Interna
+        B -- "Si es válido" --> C{Comparar Secreto}
+        C -- "Menor" --> D[Pista: Más alto]
+        C -- "Mayor" --> E[Pista: Más bajo]
+        C -- "Igual" --> F[¡Victoria!]
+    end
+
+    D --> G[Actualizar HTML]
+    E --> G
+    F --> G
+```
