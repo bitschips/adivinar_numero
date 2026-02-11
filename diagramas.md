@@ -58,3 +58,28 @@ classDiagram
     G --> B
     H --> I[Fin / Reiniciar]
 ```
+## Diagrama de bloques con intentos
+
+```mermaid
+graph TD
+    A[Inicio] --> B[Usuario introduce número]
+    B --> C{¿Es un número?}
+    
+    C -- No --> D[Mostrar error de formato]
+    D --> B
+    
+    C -- Sí --> E[Sumar +1 al contador de intentos]
+    E --> F{¿Es el correcto?}
+    
+    F -- Menor --> G[Pista: 'Es más alto']
+    F -- Mayor --> H[Pista: 'Es más bajo']
+    F -- Correcto --> I[¡Victoria! 🎉]
+    
+    G --> J[Actualizar UI con intentos]
+    H --> J
+    J --> B
+    
+    I --> K[Mostrar mensaje final con total de intentos]
+    K --> L[Fin / Reiniciar]
+```
+
